@@ -1,0 +1,1 @@
+<?php $db = new PDO("mysql:host=localhost;dbname=a0647259_test;charset=utf8","a0647259_test","121278"); ?>

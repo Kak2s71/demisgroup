@@ -1,0 +1,211 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+input,
+textarea {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-size: 16px;
+  line-height: 1.2;
+  width: 100%;
+  min-height: 100vh;
+  background: linear-gradient(45deg, #ff2d0d, #3f0000);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  width: 100%;
+  margin: 0px auto;
+  max-width: 1000px;
+  padding: 0 20px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fff;
+  padding: 40px;
+  border-radius: 5px;
+  border: 1px solid #caccc9;
+  box-shadow: 4px 4px 8px 0 rgba(34, 60, 80, 0.2);
+}
+
+
+
+.details {
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.details i {
+  font-size: 25px;
+  color: #932020;
+  margin-bottom: 10px;
+}
+
+.topic {
+  font-size: 18px;
+  font-weight: 500;
+  margin-bottom: 7px;
+}
+
+.text-one,
+.text-two {
+  font-size: 14px;
+  color: #afafb6;
+}
+
+.placeholder-form {
+  box-sizing: border-box;
+  width: 320px;
+  margin: 20px auto;
+}
+.placeholder-container {
+  position: relative;
+  width: 100%;
+  margin-bottom: 20px;
+}
+.placeholder-container input {
+  background-color: #FFF;
+  border: 1px solid #c8c8c8;
+  box-sizing: border-box;
+  color: #000;
+  font-size: 16px;
+  line-height: 16px;  
+  height: 50px;
+  outline: 0;
+  padding: 0 20px;
+  width: 100%;
+}
+.placeholder-container label {
+  color: #000;
+  font-family: Verdana, sans-serif;   
+  background-color: #FFF;
+  font-size: 16px;
+  line-height: 16px;
+  padding: 5px 10px;
+  pointer-events: none;
+  position: absolute;
+  transition: all 300ms;
+  top: 12px;
+  left: 10px;
+  background-color: #FFF;
+}
+.placeholder-container input:focus + label,
+.placeholder-container input:not(:placeholder-shown) + label{
+  top: -10px;
+  left: 10px;
+  font-size: 11px; 
+
+  color: red;
+  padding: 2px 10px;
+}
+.underline-one {
+	color: #ff0000;
+    position: relative;
+    cursor: pointer;
+    text-decoration: none; 
+}
+.underline-one:after {
+	content: "";
+    display: block;
+    position: absolute;
+    right: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background-color: black;
+    transition: width 0.5s;
+}
+
+.underline-one:hover:after {
+	content: "";
+    width: 100%;
+    display: block;
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    height: 2px;
+    background-color: red;
+    transition: width 0.5s;
+}
+input{
+  text-transform: capitalize;  
+}
+.topic-text {
+  font-size: 23px;
+  font-weight: 600;
+  color: red;
+  margin-bottom: 10px;
+}
+
+.right-side p {
+  margin-bottom: 20px;
+}
+
+#warn {
+  padding: 15px 0px;
+  color: red;
+}
+
+.button {
+  display: inline-block;
+}
+
+.button input[type="submit"] {
+  color: #fff;
+  font-size: 18px;
+  background: #c31616;
+  outline: none;
+  border: 1px solid red;
+  padding: 10px 20px;
+  transition: 0.2s;
+  
+}
+a {
+  text-decoration: none;
+  color: #000;
+}
+a:hover {
+  color: red;
+}
+.button input[type="submit"]:hover {
+  background: rgb(255, 255, 255);
+  color: red;
+}
+
+@media (max-width: 800px) {
+  .content {
+    height: 100%;
+  }
+  .details {
+    margin-right: 20px;
+  }
+  .details:last-child {
+    margin-right: 0;
+  }
+  .left-side::before {
+    display: none;
+  }
+  @media (max-width: 440px) {
+    .placeholder-container, .placeholder-form {
+      width: 260px;
+  }
+}}
